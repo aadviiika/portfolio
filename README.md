@@ -82,8 +82,8 @@ This portfolio is optimized for GitHub Pages deployment:
 
 ## 📧 Contact
 
-- **Email**: aadvikasrik2005@gmail.com
-- **Phone**: +91 7373766556
+- **Email**: ***************@gmail.com
+- **Phone**: ***** *****
 - **GitHub**: https://github.com/aadviiika
 - **LinkedIn**: https://www.linkedin.com/in/aadvika-srikrishna-328a50279/
 
