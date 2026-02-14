@@ -138,14 +138,13 @@ function App() {
 
       <nav>
         <div className="container nav-container">
-          <motion.a 
-            href="#home"
+          <motion.h1 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             className="logo-text"
           >
             Aadvika's Portfolio
-          </motion.a>
+          </motion.h1>
           <ul className="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
