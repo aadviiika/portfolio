@@ -138,13 +138,14 @@ function App() {
 
       <nav>
         <div className="container nav-container">
-          <motion.h1 
+          <motion.a 
+            href="#home"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             className="logo-text"
           >
             Aadvika's Portfolio
-          </motion.h1>
+          </motion.a>
           <ul className="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -168,7 +169,7 @@ function App() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="hero-title">
-              Hi, I'm <span className="gradient-text">Aadvika S</span>
+              Hi, I'm <span className="gradient-text">Aadvika</span>
             </h1>
             <h2 className="hero-subtitle">
               B.Tech – Artificial Intelligence & Data Science
