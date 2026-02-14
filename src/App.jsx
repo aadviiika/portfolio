@@ -178,7 +178,7 @@ function App() {
               Building intelligent solutions that bridge the gap between complex technology and real-world impact.
             </p>
             <div className="hero-buttons">
-              <a href="#projects" className="btn">View Projects</a>
+              <a href="#projects" className="btn btn-secondary">View Projects</a>
               <a href="#contact" className="btn btn-secondary">Get In Touch</a>
             </div>
             <div className="hero-stats">
