@@ -102,6 +102,54 @@ function App() {
     }
   ]
 
+  const leadershipRoles = [
+    {
+      title: "Lead Vocalist & Audience Engagement Lead",
+      company: "Band Agratha",
+      type: "Leadership Role",
+      duration: "Ongoing",
+      description: "Lead vocalist for Band Agratha, a well-established college band responsible for live performance delivery and audience engagement. Performed at multiple large-scale college and external events including Yugam, Jananam, Harvest Fest (twice), and numerous gigs both within and outside college.",
+      skills: ["Leadership", "Communication", "Stage Presence", "Crowd Engagement", "Performance Consistency", "Team Collaboration"],
+      achievements: [
+        "Delivered high-energy performances at major college festivals and external venues",
+        "Managed audience engagement and crowd interaction during live events",
+        "Collaborated effectively with band members, event organizers, and technical teams",
+        "Performed consistently in high-pressure live event environments",
+        "Built strong stage presence and performance delivery skills"
+      ]
+    },
+    {
+      title: "Secretary, Department of Artificial Intelligence & Data Science",
+      company: "Kumaraguru College of Technology",
+      type: "Departmental Leadership",
+      duration: "Former Joint Secretary → Secretary",
+      description: "Served as Joint Secretary and later Secretary of AI & DS department, actively coordinating departmental activities and initiatives. Acted as a bridge between students, faculty, and organizing teams while supporting academic and co-curricular events.",
+      skills: ["Responsibility", "Department-Level Leadership", "Organizational Capability", "Team Coordination", "Communication"],
+      achievements: [
+        "Coordinated departmental activities and major events",
+        "Facilitated communication between students and faculty",
+        "Organized academic and co-curricular initiatives",
+        "Developed leadership and organizational skills through active department involvement",
+        "Managed department-level operations and student engagement"
+      ]
+    },
+    {
+      title: "Joint Treasurer & Former USG – Delegate Affairs",
+      company: "Kumaraguru Model United Nations Society",
+      type: "Organizational Leadership",
+      duration: "Former USG → Current Joint Treasurer",
+      description: "Currently serving as Joint Treasurer of Kumaraguru MUN Society, previously as Under Secretary General for Delegate Affairs. Managed financial planning, delegate coordination, registrations, and communication for society activities.",
+      skills: ["Financial Responsibility", "Organizational Leadership", "Communication", "Event Operations", "Stakeholder Management"],
+      achievements: [
+        "Managed financial planning and budget coordination for society activities",
+        "Oversaw delegate coordination, registrations, and communication",
+        "Gained extensive experience in event management and operations",
+        "Handled multiple stakeholders including delegates, organizers, and faculty",
+        "Developed strong organizational and leadership capabilities"
+      ]
+    }
+  ]
+
   const certifications = [
     "Introduction to Artificial Intelligence – IBM",
     "Artificial Intelligence Foundations: Machine Learning – LinkedIn",
@@ -151,6 +199,7 @@ function App() {
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#experience">Experience</a></li>
+            <li><a href="#leadership">Leadership</a></li>
             <li><a href="#certifications">Certifications</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#interests">Interests</a></li>
@@ -388,6 +437,57 @@ function App() {
                   <h4>Key Achievements</h4>
                   <ul>
                     {exp.achievements.map((achievement, achievementIndex) => (
+                      <li key={achievementIndex}>{achievement}</li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="leadership" className="fade-in">
+        <div className="container">
+          <h2 className="section-title">Leadership, Clubs & Departmental Roles</h2>
+          <div className="experience-grid">
+            {leadershipRoles.map((role, index) => (
+              <motion.div 
+                key={role.title}
+                className="experience-card"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                whileHover={{ y: -10 }}
+              >
+                <div className="experience-header">
+                  <div className="experience-title-section">
+                    <h3>{role.title}</h3>
+                    <h4 className="company">{role.company}</h4>
+                  </div>
+                  <div className="experience-meta">
+                    <span className="experience-type">{role.type}</span>
+                    <span className="experience-duration">{role.duration}</span>
+                  </div>
+                </div>
+                
+                <div className="experience-description">
+                  <p>{role.description}</p>
+                </div>
+                
+                <div className="experience-skills">
+                  <h4>Skills Applied</h4>
+                  <div className="skills-list">
+                    {role.skills.map((skill, skillIndex) => (
+                      <span key={skill} className="skill-tag experience-skill">{skill}</span>
+                    ))}
+                  </div>
+                </div>
+                
+                <div className="experience-achievements">
+                  <h4>Key Achievements</h4>
+                  <ul>
+                    {role.achievements.map((achievement, achievementIndex) => (
                       <li key={achievementIndex}>{achievement}</li>
                     ))}
                   </ul>
